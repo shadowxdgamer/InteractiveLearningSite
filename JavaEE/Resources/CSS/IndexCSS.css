@@ -1,0 +1,29 @@
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #a75d9e; /* Pinkish purple */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    color: white; /* Change link color to white for contrast */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+.text-purple {
+    font-weight: bold; /* Bold text for emphasis */
+}
+#indexPage:visited{
+    font-size: 1.2rem;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+}

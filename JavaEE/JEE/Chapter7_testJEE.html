@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="../Resources/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/lessonpagesCSS.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="../Index.html"><h1 class="site-name">Mon Apprentissage Interactif</h1></a>
+            <nav>
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-purple" href="Chapter1_1JEE.html">Java Enterprise Edition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../asd&C/Chpater1_1asd&C.html">Adaptive Software Development & Programation C</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="list-group">
+                    <a href="#chapter1" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter1Menu" data-chapter="chapter1">
+                        Chapitre 1
+                    </a>
+                    <div class="collapse" id="chapter1Menu">
+                        <a href="Chapter1_1JEE.html" class="list-group-item list-group-item-action">Présentation générale</a>
+                        <a href="Chapter1_2JEE.html" class="list-group-item list-group-item-action">L'architecture 1-tiers</a>
+                        <a href="Chapter1_3JEE.html" class="list-group-item list-group-item-action">L'architecture 2-tiers</a>
+                        <a href="Chapter1_4JEE.html" class="list-group-item list-group-item-action">L'architecture 3-tiers</a>
+                        <a href="Chapter1_5JEE.html" class="list-group-item list-group-item-action">L'architecture N-tiers</a>
+                    </div>
+                    <a href="#chapter2" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter2Menu" data-chapter="chapter2">
+                        Chapitre 2
+                    </a>
+                    <div class="collapse" id="chapter2Menu">
+                        <a href="Chapter2_1JEE.html" class="list-group-item list-group-item-action">La présentation de Java EE / Jakarta EE</a>
+                        <a href="Chapter2_2JEE.html" class="list-group-item list-group-item-action">Architectures en Java EE</a>
+                        <a href="Chapter2_3JEE.html" class="list-group-item list-group-item-action">Les conteneurs Java EE</a>
+                        <a href="Chapter2_4JEE.html" class="list-group-item list-group-item-action">Les API de Java EE</a>
+                        <a href="Chapter2_5JEE.html" class="list-group-item list-group-item-action">L'assemblage et le déploiement d'applications JavaEE</a>
+                    </div>
+                    <a href="#chapter3" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter3Menu" data-chapter="chapter3">
+                        Chapitre 3
+                    </a>
+                    <div class="collapse" id="chapter3Menu">
+                        <a href="Chapter3_1JEE.html" class="list-group-item list-group-item-action">Introduction aux Servlets</a>
+                        <a href="#chapter3-2" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter3-2submenu" data-chapter="chapter3-2">
+                            Servlet
+                        </a>
+                        <div class="collapse" id="chapter3-2submenu">
+                            <a href="Chapter3_2_1JEE.html" class="list-group-item list-group-item-action">Cycle de vie d'une servlet</a>
+                            <a href="Chapter3_2_2JEE.html" class="list-group-item list-group-item-action">Radiographie d'une première servlet</a>
+                        </div>
+                        <a href="#chapter3-3" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter3-3submenu" data-chapter="chapter3-3">
+                            JSP
+                        </a>
+                        <div class="collapse" id="chapter3-3submenu">
+                            <a href="Chapter3_3_1JEE.html" class="list-group-item list-group-item-action">Pourquoi une JSP?</a>
+                            <a href="Chapter3_3_2JEE.html" class="list-group-item list-group-item-action">C'est quoi une JSP?</a>
+                            <a href="Chapter3_3_3JEE.html" class="list-group-item list-group-item-action">Cycle de vie d'une JSP</a>
+                            <a href="Chapter3_3_4JEE.html" class="list-group-item list-group-item-action">Radiographie d'un Script JSP</a>
+                            <a href="Chapter3_3_5JEE.html" class="list-group-item list-group-item-action">Les balises de directive</a>
+                        </div>
+                    </div>
+                    <a href="#chapter4" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter4Menu" data-chapter="chapter4">
+                        Chapitre 4
+                    </a>
+                    <div class="collapse" id="chapter4Menu">
+                        <a href="Chapter4_1JEE.html" class="list-group-item list-group-item-action">Présentation de MVC</a>
+                        <a href="Chapter4_2JEE.html" class="list-group-item list-group-item-action">MVC et Java EE</a>
+                        <a href="Chapter4_3JEE.html" class="list-group-item list-group-item-action">Collaboration entre JSP et servlets : l'interface requestdispatcher</a>
+                        <a href="Chapter4_4JEE.html" class="list-group-item list-group-item-action">Transmission de données: les paramètres et les attributs</a>
+                        <a href="Chapter4_5JEE.html" class="list-group-item list-group-item-action">Exemples d'applications du design pattern  MVC</a>
+                    </div>
+                    <a href="#chapter5" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter5Menu" data-chapter="chapter5">
+                        Chapitre 5
+                    </a>
+                    <div class="collapse" id="chapter5Menu">
+                        <a href="Chapter5_1JEE.html" class="list-group-item list-group-item-action">C'est quoi un Javabean</a>
+                        <a href="Chapter5_2JEE.html" class="list-group-item list-group-item-action">Pourquoi le JavaBean ?</a>
+                        <a href="Chapter5_3JEE.html" class="list-group-item list-group-item-action">Structure d'un Javabean</a>
+                        <a href="Chapter5_4JEE.html" class="list-group-item list-group-item-action">Comment utiliser des beans ?</a>
+                        <a href="Chapter5_5JEE.html" class="list-group-item list-group-item-action">Les Scopes d'un bean</a>
+                    </div>
+                    <a href="#chapter6" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter6Menu" data-chapter="chapter6">
+                        Chapitre 6
+                    </a>
+                    <div class="collapse" id="chapter6Menu">
+                        <a href="Chapter6_1JEE.html" class="list-group-item list-group-item-action">Les Taglibs et la JSTL</a>
+                    </div>
+                    <a href="#chapter7" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter7Menu" data-chapter="chapter7">
+                        Testez-vous !
+                    </a>
+                    <div class="collapse" id="chapter7Menu">
+                        <a href="Chapter7_testJEE.html" class="list-group-item list-group-item-action">Quiz JEE</a>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-md-9">
+                
+                <h2>Testez vos connaissances : Quiz Java EE</h2>
+
+                <div class="section">
+                    <h3>Question 1: JEE est l'acronyme de …………….</h3>
+                    <input type="text" class="form-control" id="q1" placeholder="Votre réponse ici">
+                </div>
+
+                <div class="section">
+                    <h3>Question 2: Quel serveur s’occupe de l’exécution des composants SERVLET /JSP?</h3>
+                    <div>
+                        <input type="radio" name="q2" id="q2a" value="Tomcat">
+                        <label for="q2a">a) Tomcat</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" id="q2b" value="Apache HTTP Server">
+                        <label for="q2b">b) Apache HTTP Server</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q2" id="q2c" value="WildFly">
+                        <label for="q2c">c) WildFly</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 3: Donnez un exemple de serveur d'application Java EE.</h3>
+                    <input type="text" class="form-control" id="q3" placeholder="Votre réponse ici">
+                </div>
+
+                <div class="section">
+                    <h3>Question 4: Quels sont les composants métier dans une application Java EE ?</h3>
+                    <div>
+                        <input type="checkbox" id="q4a" name="q4" value="Servlets">
+                        <label for="q4a">Servlets</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q4b" name="q4" value="JSP">
+                        <label for="q4b">JSP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q4c" name="q4" value="EJB">
+                        <label for="q4c">EJB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q4d" name="q4" value="JavaBeans">
+                        <label for="q4d">JavaBeans</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 5: Le modèle 3-tiers d'une architecture n-tiers se compose de :</h3>
+                    <div>
+                        <input type="radio" name="q5" id="q5a" value="Interface utilisateur, serveur de persistance, serveur d'application">
+                        <label for="q5a">1. Interface utilisateur, serveur de persistance, serveur d'application</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" id="q5b" value="Interface utilisateur, base de données, serveur d'application">
+                        <label for="q5b">2. Interface utilisateur, base de données, serveur d'application</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q5" id="q5c" value="Serveur de présentation, serveur de données, serveur d'API">
+                        <label for="q5c">3. Serveur de présentation, serveur de données, serveur d'API</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 6: Dans une architecture n-tiers, quels sont les rôles du serveur d'application ?</h3>
+                    <div>
+                        <input type="checkbox" id="q6a" name="q6" value="Gérer l'interface utilisateur">
+                        <label for="q6a">Gérer l'interface utilisateur</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q6b" name="q6" value="Gérer la logique métier">
+                        <label for="q6b">Gérer la logique métier</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q6c" name="q6" value="Stocker les données">
+                        <label for="q6c">Stocker les données</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q6d" name="q6" value="Gérer les sessions utilisateurs">
+                        <label for="q6d">Gérer les sessions utilisateurs</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 7: Quel fichier contient les Servlets et JSP dans une application Java EE ?</h3>
+                    <input type="text" class="form-control" id="q7" placeholder="Votre réponse ici">
+                </div>
+
+                <div class="section">
+                    <h3>Question 8: Le modèle client/serveur repose sur :</h3>
+                    <div>
+                        <input type="radio" name="q8" id="q8a" value="L'exécution locale des traitements sur le serveur">
+                        <label for="q8a">1. L'exécution locale des traitements sur le serveur</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q8" id="q8b" value="La répartition des traitements entre client et serveur">
+                        <label for="q8b">2. La répartition des traitements entre client et serveur</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q8" id="q8c" value="L'utilisation exclusive d'un serveur pour tous les traitements">
+                        <label for="q8c">3. L'utilisation exclusive d'un serveur pour tous les traitements</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 9: Quelle est la différence entre JavaEE, Java et Javascript ?</h3>
+                    <div>
+                        <input type="radio" name="q9" id="q9a" value="JavaEE est utilisé pour les applications d'entreprise, Java est un langage de programmation, et JavaScript est pour les sites web.">
+                        <label for="q9a">1. JavaEE est utilisé pour les applications d'entreprise, Java est un langage de programmation, et JavaScript est pour les sites web.</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q9" id="q9b" value="JavaEE et Java sont des frameworks, tandis que JavaScript est un langage.">
+                        <label for="q9b">2. JavaEE et Java sont des frameworks, tandis que JavaScript est un langage.</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q9" id="q9c" value="Java et JavaEE sont la même chose, mais JavaScript est différent.">
+                        <label for="q9c">3. Java et JavaEE sont la même chose, mais JavaScript est différent.</label>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Question 10: Sélectionnez le bon extrait de code</h3>
+                    <div class="d-flex justify-content-between">
+                        <div class="snippet">
+                            <pre>
+            <code>
+            import java.io.*;
+            import javax.servlet.*;
+            import javax.servlet.http.*;
+            
+            public class HelloWorld extends HttpServlet {
+                public void doGet(HttpServletRequest request, HttpServletResponse response)
+                    throws ServletException, IOException {
+                    response.setContentType("text/html");
+                    PrintWriter out = response.getWriter();
+                    out.println(""&lt;h1&gt;Hello World&lt;/h1&gt;"");
+                }
+            }
+            </code>
+                            </pre>
+                            <div>
+                                <input type="radio" name="q10" id="q10a" value="A">
+                                <label for="snippetA">A</label>
+                            </div>
+                        </div>
+                        
+                        <div class="snippet">
+                            <pre>
+            <code>
+                import java.io.*;
+                import javax.servlet.*;
+                import javax.servlet.http.*;
+                
+                public class ExampleServlet{
+                    public void doGet(HttpServletRequest request, HttpServletResponse response)
+                    throws ServletException, IOException {
+                        response.setContentType("text/html");
+                        PrintWriter out = response.getWriter();
+                        out.println(""&lt;h1&gt;Hello World&lt;/h1&gt;"");
+                    }
+            }
+        </code>
+                            </pre>
+                            <div>
+                                <input type="radio" name="q10" id="q10b" value="B">
+                                <label for="snippetB">B</label>
+                            </div>
+                        </div>
+                        
+                        <div class="snippet">
+                            <pre>
+            <code>
+                import java.io.*;
+            import javax.servlet.*;
+            import javax.servlet.http.*;
+            
+            public class MyServlet extends HttpServlet {
+                public void doPost(HttpServletRequest request, HttpServletResponse response)
+                throws ServletException, IOException {
+                    PrintWriter out = response.getWriter();
+                    System.out.println("&lt;h1&gt;Hello World&lt;/h1&gt;");
+                }
+            }
+        </code>
+    </pre>
+    <div>
+                                <input type="radio" name="q10" id="q10c" value="C">
+                                <label for="snippetC">C</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>Examinez l'extrait de code JSP suivant</h3>
+                    <pre>
+                <code>
+                &lt;%@ page import="java.util.*" %&gt;
+                &lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+                pageEncoding="ISO-8859-1"%&gt;
+                &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/html4/loose.dtd"&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+                &lt;title&gt;AREL V6.0&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;h1 align="center"&gt;L'école virtuelle de l'EISTI&lt;/h1&gt;
+                &lt;form method="GET" action="select-promo"&gt;Sélectionner la promo à
+                afficher : &lt;select name="promo" size="1"&gt;
+                &lt;option&gt;ing1&lt;/option&gt;
+                &lt;option&gt;ing2&lt;/option&gt;
+                &lt;/select&gt;&lt;input type="SUBMIT" /&gt;&lt;/form&gt;
+                &lt;h2&gt;Liste des étudiants :&lt;/h2&gt;
+                &lt;% 
+                List&lt;String&gt; promoList = (List&lt;String&gt;)request.getAttribute("promo");
+                Iterator it = promoList.iterator();
+                while(it.hasNext()) {
+                out.print("&lt;br /&gt;" + it.next());
+                }
+                %&gt;
+                &lt;/body&gt;&lt;/html&gt;
+                </code>
+                    </pre>
+                    <h3>Question 11: De quel type de page s'agit-il ?</h3>
+                    <div>
+                        <input type="radio" name="q11" id="q11a" value="page servlet">
+                        <label for="q11a">a) page servlet</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q11" id="q11b" value="page jsp">
+                        <label for="q11b">b) page jsp</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="q11" id="q11c" value="class java">
+                        <label for="q11c">c) class java</label>
+                    </div>
+            
+                    <h3>Question 12: Que précise la directive suivante dans la page JSP ?</h3>
+                    <pre>
+                <code>
+                &lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1" %&gt;
+                </code>
+                    </pre>
+                    <div>
+                        <input type="checkbox" id="q12a" name="q12" value="A">
+                        <label for="q12a">A. Il définit le format d'encodage de la page et le type MIME de la réponse.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q12b" name="q12" value="B">
+                        <label for="q12b">B. Il importe les classes Java dans la page JSP.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q12c" name="q12" value="C">
+                        <label for="q12c">C. Il précise la langue utilisée ainsi que le type de contenu et l'encodage des caractères de la réponse.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q12d" name="q12" value="D">
+                        <label for="q12d">D. Il contrôle le comportement de mise en cache de la page.</label>
+                    </div>
+                
+                    <h3>Question 13 : Quelle méthode est utilisée pour récupérer l'attribut nommé « promo » dans la page JSP ?</h3>
+                    <input type="text" class="form-control" id="q13" placeholder="Votre réponse ici">
+                </div>
+                
+                <div class="navigation">
+                    <button class="btn btn-secondary" id="submitQuiz">Submit</button>
+                    <div id="scoreDisplay"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../Resources/JS/quizScript.js"></script>
+</body>
+</html>

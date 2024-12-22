@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Boucles en C</title>
+    
+<script>
+// Réponses correctes du QCM
+const correctAnswers = ["1", "2", "4", "2"]; // Réponses correctes pour q1, q2, q3, q4
+
+function calculateScore() {
+    const form = document.getElementById("quizForm");
+    let score = 0;
+
+    // Vérifie les réponses de chaque question
+    correctAnswers.forEach((answer, index) => {
+        const questionName = `q${index + 1}`;
+        const userAnswer = form.elements[questionName].value;
+
+        // Compare la réponse de l'utilisateur à la bonne réponse
+        if (userAnswer === answer) {
+            score++;
+        }
+    });
+
+    // Affiche le résultat
+    document.getElementById("resultat").textContent = `Votre score : ${score} / ${correctAnswers.length}`;
+}
+</script>
+</head>
+
+<body>
+
+<h2>QCM : Boucles en Algorithmique et Programmation en C</h2>
+
+<form id="quizForm">
+    <div>
+        <p>1. Quelle est la syntaxe générale d'une boucle for en C ?</p>
+        <label><input type="radio" name="q1" value="1"> for (initialisation; condition; incrémentation)</label><br>
+        <label><input type="radio" name="q1" value="2"> for condition, incrémentation, initialisation</label><br>
+        <label><input type="radio" name="q1" value="3"> while (initialisation; condition; incrémentation)</label><br>
+        <label><input type="radio" name="q1" value="4"> do...while (condition; incrémentation; initialisation)</label><br>
+    </div>
+
+    <div>
+        <p>2. Combien de fois cette boucle s'exécutera-t-elle ? <br>
+        <code>for (int i = 0; i < 5; i++)</code></p>
+        <label><input type="radio" name="q2" value="1"> 4</label><br>
+        <label><input type="radio" name="q2" value="2"> 5</label><br>
+        <label><input type="radio" name="q2" value="3"> 6</label><br>
+        <label><input type="radio" name="q2" value="4"> 0</label><br>
+    </div>
+
+    <div>
+        <p>3. Quelle sera la valeur finale de <code>i</code> après cette boucle en C ? <br>
+        <code>for (int i = 0; i < 3; i++)</code></p>
+        <label><input type="radio" name="q3" value="1"> 2</label><br>
+        <label><input type="radio" name="q3" value="2"> 3</label><br>
+        <label><input type="radio" name="q3" value="3"> 4</label><br>
+        <label><input type="radio" name="q3" value="4"> i est inaccessible en dehors de la boucle</label><br>
+    </div>
+
+    <div>
+        <p>4. Que se passe-t-il si la condition d’une boucle `for` en C est toujours vraie ?</p>
+        <label><input type="radio" name="q4" value="1"> La boucle s'exécute une seule fois</label><br>
+        <label><input type="radio" name="q4" value="2"> La boucle devient infinie</label><br>
+        <label><input type="radio" name="q4" value="3"> La boucle ne démarre pas</label><br>
+        <label><input type="radio" name="q4" value="4"> Erreur de syntaxe</label><br>
+    </div>
+
+    <button type="button" onclick="calculateScore()">Afficher le résultat</button>
+</form>
+
+<p id="resultat"></p>
+
+
+</body>
+</html>

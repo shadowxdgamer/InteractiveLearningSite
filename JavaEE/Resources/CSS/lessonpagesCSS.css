@@ -1,0 +1,172 @@
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #a75d9e; /* Pinkish purple */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    color: white; /* Change link color to white for contrast */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+.text-purple {
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+}
+
+.video-container {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2rem; /* Main section header */
+    margin-top: 20px;
+    color: #333; /* Darker color for better readability */
+}
+
+h3 {
+    font-size: 1.5rem; /* Sub-section header */
+    margin-top: 15px;
+    color: #555; /* Slightly lighter color for subheadings */
+}
+
+p {
+    font-size: 1.1rem; /* Paragraph text size */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
+ul {
+    list-style-type: disc; /* Bullet points */
+    margin-left: 20px; /* Indent list */
+    margin-bottom: 15px; /* Spacing below the list */
+}
+
+.video-container {
+    margin-top: 20px;
+}
+img {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+.section {
+    margin-bottom: 40px; /* Space between sections */
+    padding: 20px; /* Padding around each section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.figure-caption {
+    text-align: center; /* Center the caption */
+    font-style: italic; /* Italicize the caption */
+    margin-top: 10px; /* Space above the caption */
+    color: #777; /* Grey color for the caption */
+}
+.highlight {
+    background-color: #ffe0b2; /* Light yellow background */
+    padding: 2px 4px; /* Padding around highlighted text */
+    border-radius: 4px; /* Rounded corners */
+}
+.table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+.table th, .table td {
+    padding: 10px; /* Padding for cells */
+    border: 1px solid #ccc; /* Light grey border */
+    text-align: left; /* Left-align text */
+}
+
+.table th {
+    background-color: #a75d9e; /* Match navbar color */
+    color: white; /* White text for contrast */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey for alternate rows */
+}
+
+.table-caption {
+    margin-top: 10px; /* Space above caption */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center; /* Center align the caption */
+}
+.navigation {
+    margin-top: 20px;
+    text-align: center; /* Center the buttons */
+}
+
+.navigation .btn {
+    margin: 0 10px; /* Spacing between buttons */
+}
+pre {
+    background-color: #f5f5f5; /* Light grey background for code blocks */
+    border-left: 3px solid #a75d9e; /* Left border matching the navbar color */
+    padding: 10px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    font-family: monospace; /* Monospace font for code */
+    line-height: 1.5; /* Improve readability */
+}
+
+code {
+    background-color: #f0f0f0; /* Slightly darker background for inline code */
+    padding: 2px 4px; /* Padding for inline code */
+    border-radius: 4px; /* Rounded corners */
+    color: #a75d9e; /* Match the text color to the site theme */
+    font-family: monospace; /* Monospace font for consistency */
+}
+.collapsible {
+    margin-top: 20px;
+}
+
+.collapsible input {
+    display: none;
+}
+
+.collapsible label {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.collapsible .content {
+    display: none;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.collapsible input:checked ~ .content {
+    display: block;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the snippets */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+}
+.snippet {
+    flex: 1 1 calc(30% - 10px); /* Each snippet takes 30% of the width */
+    margin: 5px; /* Space between the snippets */
+    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+    border-radius: 5px; /* Optional: Rounded corners */
+    padding: 10px; /* Add padding for the content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Box shadow */
+}
