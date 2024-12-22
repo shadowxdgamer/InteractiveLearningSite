@@ -34,14 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add a new question
     document.getElementById("addQuestion").addEventListener("click", () => {
-        const questionText = document.getElementById("questionText").value.toLowerCase(); // Convert to lowercase
+        const questionText = document.getElementById("questionText").value.trim();
         const questionType = questionTypeSelect.value;
         const correctAnswer = correctAnswerInput.value
             .split(",")
-            .map(ans => ans.trim().toLowerCase()); // Convert to lowercase
+            .map(ans => ans.trim().toLowerCase());
         const options = Array.from(optionsList.querySelectorAll("input"))
-            .map(input => input.value.toLowerCase()) // Convert options to lowercase
-            .filter(val => val);
+            .map(input => input.value.trim().toLowerCase())
+            .filter(Boolean);
+
+        if (!questionText) {
+            alert("Please enter a question.");
+            return;
+        }
+
+        if ((questionType === "radio" || questionType === "checkbox") && options.length < 2) {
+            alert("Please add at least two options.");
+            return;
+        }
+
+        if (!correctAnswer.length) {
+            alert("Please enter at least one correct answer.");
+            return;
+        }
 
         const question = { questionText, questionType, options, correctAnswer };
         questions.push(question);
@@ -64,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
             questionDiv.className = "mb-4";
 
             const label = document.createElement("label");
-            label.innerHTML = q.questionType === "code" ? `<pre>${q.questionText}</pre>` : q.questionText;
+            label.innerHTML = `<strong>Question ${index + 1}:</strong> ${q.questionText}`;
             label.className = "form-label fw-bold";
             questionDiv.appendChild(label);
 
@@ -160,8 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function generateJS() {
-        return `
-let questions = ${JSON.stringify(questions)};
+        return `let questions = ${JSON.stringify(questions)};
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
