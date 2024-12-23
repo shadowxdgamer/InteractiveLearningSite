@@ -8,3 +8,5 @@ so all you have to do is change the JS script path each time
 1. duplicate html file
 2. change the generated js file path
 3 done :D
+
+NB : close any ADblock or else the QuizGenerator won't work

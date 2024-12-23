@@ -9,3 +9,5 @@ donc tout ce que vous avez à faire est de modifier le chemin du script JS à ch
 1.Dupliquez le fichier HTML.
 2.Modifiez le chemin du fichier JS généré.
 3.C'est tout ! :D
+
+NB : fermer ADblock sinon le QuizGenerator ne marche pas
