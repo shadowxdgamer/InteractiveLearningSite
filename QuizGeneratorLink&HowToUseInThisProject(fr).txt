@@ -1,0 +1,11 @@
+Lien :
+https://github.com/shadowxdgamer/QuizGenerator
+
+Comment utiliser :
+Lors de l'utilisation du Générateur de Quiz, deux fichiers seront téléchargés.
+J'ai intégré le fichier HTML et CSS au projet de site d'apprentissage interactif,
+donc tout ce que vous avez à faire est de modifier le chemin du script JS à chaque fois.
+
+1.Dupliquez le fichier HTML.
+2.Modifiez le chemin du fichier JS généré.
+3.C'est tout ! :D

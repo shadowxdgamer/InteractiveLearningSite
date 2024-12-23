@@ -1,0 +1,10 @@
+Link :
+https://github.com/shadowxdgamer/QuizGenerator
+
+How to use :
+When using the Quiz Generator you will have 2 files downloaded
+i implemented the html and css to the interactive learning site project
+so all you have to do is change the JS script path each time
+1. duplicate html file
+2. change the generated js file path
+3 done :D
