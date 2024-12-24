@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Learning</title>
-    
+    <title>Quiz Page</title>
     <link rel="stylesheet" href="../Resources/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Resources/CSS/lessonpagesCSS.css">
-
-
+    <script src="../Resources/JS/quizChap4.js" defer></script>
+    <link rel="stylesheet" href="../Resources/CSS/quiz.css">
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-light">
@@ -17,7 +16,7 @@
             <nav>
                 <ul class="navbar-nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link text-purple" href="Chapter1_1JEE.html">Java Enterpirse Edition</a>
+                        <a class="nav-link text-purple" href="Chapter1_1JEE.html">Java Enterprise Edition</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../../Algorithmique Et C/asd&C/Chpater1_1asd&C.html">Adaptive Software Development & Programation C</a>
@@ -29,7 +28,7 @@
 
     <div class="container mt-4">
         <div class="row">
-                                    <aside class="col-md-3">
+            <aside class="col-md-3">
                 <div class="sidebar">
                 <div class="list-group">
                     <a href="#chapter1" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#chapter1Menu" data-chapter="chapter1">
@@ -116,92 +115,35 @@
                 </div>
                 </div>
             </aside>
+
             <main class="col-md-9">
-                <div class="section">
-                    <h2>Les trois niveaux d'abstraction d'une application</h2>
-                    <p>En règle générale, une application informatique peut être découpée en trois niveaux d'abstraction distincts :</p>
+                <!-- Encapsulate quiz content in a unique container -->
+                <div class="quiz-container">
+                    <div class="container">
+                        <h1>Testez vos connaissances : Quiz Java EE</h1>
+                        <div id="quiz"></div>
+                        <button onclick="checkAnswers()">Soumettre les réponses</button>
+                        <button onclick="retestQuiz()">Recommencer le Quiz</button>
+                    </div>
+                    <div class="quiz-modal-overlay" id="modal-overlay" style="display: none;">
+                        <div class="quiz-modal">
+                          <h2>Vos Résultats</h2>
+                          <p id="score-text"></p>
+                          <div class="score-bar">
+                            <div id="score-bar-fill"></div>
+                          </div>
+                          <button onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="section">
-                    <h2>L'assemblage et le déploiement d'applications JavaEE</h2>
-                    <p>
-                        Pour déployer une application dans un conteneur, il faut lui fournir deux éléments :
-                    </p>
-                    <ul>
-                        <li>
-                            L'application avec tous les composants (classes compilées, ressources ...) regroupée dans une archive ou module. Chaque conteneur possède son propre format d'archive.
-                        </li>
-                        <li>
-                            Un fichier descripteur de déploiement contenu dans le module qui précise au conteneur des options pour exécuter l'application.
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="section">
-                    <h3>Différents types d'archives</h3>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Archive / module</th>
-                                <th>Contenu</th>
-                                <th>Extension</th>
-                                <th>Descripteur de déploiement</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>application client</td>
-                                <td>Regroupe les ressources nécessaires à leur exécution (classes, bibliothèques, images, ...)</td>
-                                <td>jar</td>
-                                <td>application-client.xml</td>
-                            </tr>
-                            <tr>
-                                <td>web</td>
-                                <td>Regroupe les servlets et les JSP ainsi que les ressources nécessaires à leur exécution (classes, bibliothèques de balises, images, ...)</td>
-                                <td>war</td>
-                                <td>web.xml</td>
-                            </tr>
-                            <tr>
-                                <td>EJB</td>
-                                <td>Regroupe les EJB et leurs composants (classes)</td>
-                                <td>jar</td>
-                                <td>ejb-jar.xml</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <span class="figure-caption">Tableau II 1 : Les différents types d'archives</span>
-                </div>
-                
-                <div class="section">
-                    <p>
-                        Une application JavaEE peut regrouper différents modules : modules web, modules EJB ... Chacun de ces modules possède son propre mode de packaging. JavaEE propose de regrouper ces différents modules dans un module unique sous la forme d'un fichier EAR (Entreprise Archive).
-                    </p>
-                    <p>
-                        Le format de cette archive est très semblable à celui des autres archives :
-                    </p>
-                    <ul>
-                        <li>Un contenu : les différents modules qui composent l'application (module web, EJB, fichier RAR, ...);</li>
-                        <li>Un fichier descripteur de déploiement nommé application.xml.</li>
-                    </ul>
-                </div>
-                
-                <div class="section">
-                    <h3>En résumé</h3>
-                    <p>
-                        Ce chapitre a donné un aperçu sur la plateforme JavaEE et les différentes API qui la composent, il a décrit les différents éléments qui composent l'environnement d'exécution des applications JavaEE et leurs modes d'assemblage et de déploiement. Dans le chapitre qui suit, nous allons découvrir les servlets et les JSP qui seront utilisés pour implémenter le modèle MVC.
-                    </p>
-                </div>
-                
             </main>
-            <div class="navigation">
-                <a href="Chapter2_4JEE.html" class="btn btn-secondary">Précédent</a>
-            </div>
         </div>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../Resources/JS/sideBarOpen.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--<script src="../Resources/JS/quizScript.js"></script> -->
 </body>
 </html>
