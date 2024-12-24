@@ -1,0 +1,194 @@
+.quiz-container {
+    --text: #230117;
+    --background: #e4c3f9;
+    --primary: #ce27b5;
+    --secondary: #ae1369;
+    --accent: #7d1252;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .quiz-container {
+      --text: #fedcf2;
+      --background: #27063c;
+      --primary: #d831bf;
+      --secondary: #ec51a6;
+      --accent: #ed82c2;
+    }
+  }
+  
+  .quiz-container {
+    font-family: system-ui, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    padding: 2rem;
+  }
+  
+  .quiz-container .question {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz-container .question h3 {
+    margin: 0;
+  }
+  
+  .quiz-container .question-number {
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .quiz-container .code {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: monospace;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .quiz-container input[type="text"],
+  .quiz-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--background);
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .quiz-container input[type="text"]:focus,
+  .quiz-container textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .quiz-container input[type="radio"],
+  .quiz-container input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .quiz-container input[type="checkbox"] {
+    border-radius: 4px;
+  }
+  
+  .quiz-container input[type="radio"]:checked,
+  .quiz-container input[type="checkbox"]:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .quiz-container label {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--text);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  .quiz-container button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .quiz-container button:hover {
+    background: var(--secondary);
+  }
+  
+  .quiz-container .answer-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .quiz-container .correct {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+  }
+  
+  .quiz-container .incorrect {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+  
+  .quiz-container .quiz-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Higher than Bootstrap's default z-index */
+  }
+  
+  .quiz-container .quiz-modal {
+    background: var(--background);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .quiz-container .quiz-modal h2 {
+    margin: 0 0 1rem;
+  }
+  
+  .quiz-container .quiz-modal p {
+    margin: 0.5rem 0;
+  }
+  
+  .quiz-container .quiz-modal .score-bar {
+    background: var(--accent);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  
+  .quiz-container .quiz-modal .score-bar div {
+    background: var(--primary);
+    height: 100%;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .quiz-container .quiz-modal button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .quiz-container .quiz-modal button:hover {
+    background: var(--primary);
+  }
+  
