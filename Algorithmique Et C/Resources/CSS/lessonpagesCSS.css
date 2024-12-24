@@ -1,175 +1,342 @@
-.site-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-li li {
-  list-style-type: circle;
+/* Global Variables */
+:root {
+    --text-color: #230117; /* Dark Purple Text */
+    --background-color: #e5c5f9; /* Light Lavender Background */
+    --primary-color: #ce27b5; /* Vibrant Pink */
+    --secondary-color: #ae1369; /* Rich Magenta */
+    --accent-color: #7d1252; /* Dark Fuchsia */
 }
 
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar */
 .navbar {
-    background-color: #a75d9e; /* Pinkish purple */
+    background-color: var(--primary-color);
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-link {
-    font-size: 1.2rem;
-    margin: 0 15px;
-    color: white; /* Change link color to white for contrast */
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 20px;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
+    color: var(--accent-color);
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
-.text-purple {
-    font-weight: bold; /* Bold text for emphasis */
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.list-group-item {
-    font-size: 1.1rem;
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.video-container {
-    margin-top: 20px;
+.hero-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
-h2 {
-    font-size: 2rem; /* Main section header */
-    margin-top: 20px;
-    color: #333; /* Darker color for better readability */
-}
-
-h3 {
-    font-size: 1.5rem; /* Sub-section header */
-    margin-top: 15px;
-    color: #555; /* Slightly lighter color for subheadings */
-}
-
-p {
-    font-size: 1.1rem; /* Paragraph text size */
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 15px; /* Spacing between paragraphs */
-}
-
-ul {
-    list-style-type: disc; /* Bullet points */
-    margin-left: 20px; /* Indent list */
-    margin-bottom: 15px; /* Spacing below the list */
-}
-
-.video-container {
-    margin-top: 20px;
-}
-img {
-    display: block;
-    margin: 0 auto; /* Center the image */
-    max-width: 100%; /* Ensure responsive images */
-    height: auto; /* Maintain aspect ratio */
-}
+/* Section Styles */
 .section {
-    margin-bottom: 40px; /* Space between sections */
-    padding: 20px; /* Padding around each section */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-.figure-caption {
-    text-align: center; /* Center the caption */
-    font-style: italic; /* Italicize the caption */
-    margin-top: 10px; /* Space above the caption */
-    color: #777; /* Grey color for the caption */
-}
-.highlight {
-    background-color: #ffe0b2; /* Light yellow background */
-    padding: 2px 4px; /* Padding around highlighted text */
-    border-radius: 4px; /* Rounded corners */
-}
-.table {
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Remove space between borders */
-    margin-top: 20px; /* Space above the table */
+    background-color: var(--background-color);
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.table th, .table td {
-    padding: 10px; /* Padding for cells */
-    border: 1px solid #ccc; /* Light grey border */
-    text-align: left; /* Left-align text */
+.section:hover {
+    transform: translateY(-5px);
 }
 
-.table th {
-    background-color: #a75d9e; /* Match navbar color */
-    color: white; /* White text for contrast */
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light grey for alternate rows */
+.section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
-.table-caption {
-    margin-top: 10px; /* Space above caption */
-    font-weight: bold; /* Bold for emphasis */
-    text-align: center; /* Center align the caption */
-}
-.navigation {
-    margin-top: 20px;
-    text-align: center; /* Center the buttons */
-}
-
-.navigation .btn {
-    margin: 0 10px; /* Spacing between buttons */
-}
-pre {
-    background-color: #f5f5f5; /* Light grey background for code blocks */
-    border-left: 3px solid #a75d9e; /* Left border matching the navbar color */
-    padding: 10px; /* Padding for spacing */
-    border-radius: 5px; /* Rounded corners */
-    overflow-x: auto; /* Enable horizontal scrolling for long lines */
-    font-family: monospace; /* Monospace font for code */
-    line-height: 1.5; /* Improve readability */
-}
-
-code {
-    background-color: #f0f0f0; /* Slightly darker background for inline code */
-    padding: 2px 4px; /* Padding for inline code */
-    border-radius: 4px; /* Rounded corners */
-    color: #a75d9e; /* Match the text color to the site theme */
-    font-family: monospace; /* Monospace font for consistency */
-}
-.collapsible {
-    margin-top: 20px;
-}
-
+/* Collapsible Section */
 .collapsible input {
     display: none;
 }
 
 .collapsible label {
-    background: #007BFF;
-    color: #fff;
-    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
     display: block;
     cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible label:hover {
+    background-color: var(--accent-color);
 }
 
 .collapsible .content {
     display: none;
-    padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .collapsible input:checked ~ .content {
     display: block;
+    opacity: 1;
 }
-.d-flex {
-    display: flex;
-    justify-content: space-between; /* Ensures space between the snippets */
-    flex-wrap: wrap; /* Allows wrapping if needed */
+
+/* Buttons */
+.navigation .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.snippet {
-    flex: 1 1 calc(30% - 10px); /* Each snippet takes 30% of the width */
-    margin: 5px; /* Space between the snippets */
-    border: 1px solid #ccc; /* Optional: Add a border for visibility */
-    border-radius: 5px; /* Optional: Rounded corners */
-    padding: 10px; /* Add padding for the content */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Box shadow */
+
+.navigation .btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
 }
+
+.navigation .btn:active {
+    background-color: var(--accent-color);
+}
+
+/* Code Block Styling */
+pre {
+    background-color: #f7f7f7;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+pre:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Copy Button for Code Block */
+pre .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+pre .copy-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fab:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Card Design for Lessons/Chapters */
+.card {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Card Button (For Each Card) */
+.card .btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: var(--accent-color);
+}
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    }
+.sidebar:hover {
+    background-color: var(--accent-color);
+    }
+.list-group-item {
+    background-color: var(--primary-color);
+    color: white;
+    margin-bottom: 8px;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+.list-group-item:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    }
+.list-group-item-action {
+    color: white;
+    text-decoration: none;
+    }
+.list-group-item-action:hover {
+    text-decoration: none;
+    color: white;
+    }
+.chapter-menu a {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-top: 5px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    }
+.chapter-menu a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateX(10px);
+    }
+.collapse {
+    transition: max-height 0.3s ease-in-out;
+    }
